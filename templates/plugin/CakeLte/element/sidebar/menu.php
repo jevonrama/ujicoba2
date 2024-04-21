@@ -21,6 +21,17 @@ $menu = [
         'uri' => ['controller' => 'Users', 'action' => 'index', 'plugin' => false],
     ],
 
+    'USER SESSION' => [
+        'label' => __('USER SESSION'),
+        'type' => $this->MenuLte::ITEM_TYPE_HEADER,
+    ],
+
+    'Logout'=> [
+        'label' => __('Logout'),
+        'uri' => ['controller' => 'Users', 'action' => 'logout', 'plugin' => false],
+        'icon' => 'fas fa-sign-out-alt',  
+    ],
+
     'Other Menu' => [
         'label' => __('OTHER MENU'),
         'type' => $this->MenuLte::ITEM_TYPE_HEADER, // or 'header'
