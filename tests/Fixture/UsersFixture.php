@@ -26,8 +26,8 @@ class UsersFixture extends TestFixture
                 'password' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
                 'telp' => '',
                 'level' => 'Lorem ipsum dolor sit amet',
-                'created' => '2024-04-20 06:42:54',
-                'modified' => '2024-04-20 06:42:54',
+                'created' => '2024-04-21 09:30:17',
+                'modified' => '2024-04-21 09:30:17',
             ],
         ];
         parent::init();

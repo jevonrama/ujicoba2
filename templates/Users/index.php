@@ -44,14 +44,20 @@ $this->Breadcrumbs->add([
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($users as $user) : ?>
+                <?php foreach ($users as $koentji => $user) : ?>
                     <tr>
-                        <td><?= $this->Number->format($user->id) ?></td>
+                        <td><?= $this->Number->format($koentji+1) ?></td>
                         <td><?= h($user->nik) ?></td>
                         <td><?= h($user->nama) ?></td>
                         <td><?= h($user->username) ?></td>
                         <td><?= h($user->telp) ?></td>
-                        <td><?= h($user->level) ?></td>
+                        <td><?php if($user->level == 0){
+                            echo "Admin";
+                        }elseif ($user->level == 1) {
+                            echo "Petugas";
+                        }elseif ($user->level == 2){
+                            echo "Warga";
+                        }?></td>
                         <td><?= h($user->created) ?></td>
                         <td><?= h($user->modified) ?></td>
                         <td class="actions">

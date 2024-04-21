@@ -56,7 +56,7 @@ class ComplaintsController extends AppController
 
             $path = "upload/".$name.".".$eks;
             $complaint = $this->Complaints->patchEntity($complaint, $this->request->getData());
-            $complaint->gambar = $path.".".$eks;
+            $complaint->gambar = $name.".".$eks;
 
             $files['gambar']->moveTo(WWW_ROOT.$path);
 

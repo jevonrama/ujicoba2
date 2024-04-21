@@ -41,9 +41,9 @@ $this->Breadcrumbs->add([
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($responses as $response) : ?>
+                <?php foreach ($responses as $kunci => $response) : ?>
                     <tr>
-                        <td><?= $this->Number->format($response->id) ?></td>
+                        <td><?= $this->Number->format($kunci+1) ?></td>
                         <td><?= h($response->created) ?></td>
                         <td><?= h($response->modified) ?></td>
                         <td><?= $response->has('complaint') ? $this->Html->link($response->complaint->judul, ['controller' => 'Complaints', 'action' => 'view', $response->complaint->id]) : '' ?></td>

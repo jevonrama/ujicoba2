@@ -44,13 +44,23 @@ $this->Breadcrumbs->add([
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($complaints as $complaint) : ?>
+                <?php foreach ($complaints as $key => $complaint) : ?>
                     <tr>
-                        <td><?= $this->Number->format($complaint->id) ?></td>
+                        <td><?= $this->Number->format($key+1) ?></td>
                         <td><?= h($complaint->tanggal) ?></td>
                         <td><?= h($complaint->judul) ?></td>
                         <td><?= $this->html->image('../upload/'.$complaint->gambar,['width'=>'100px']) ?></td>
-                        <td><?= h($complaint->status) ?></td>
+                        <td><?php if ($complaint->status == 0) {
+                            echo"Menunggu";
+                        }elseif ($complaint->status == 1) {
+                            echo "Diproses";
+                        }elseif ($complaint->status == 2) {
+                            echo "Ditolak";
+                        }elseif ($complaint->status == 3) {
+                            echo "Selesai";
+                        }
+                        
+                        ?></td>
                         <td><?= h($complaint->created) ?></td>
                         <td><?= h($complaint->modified) ?></td>
                         <td><?= $complaint->has('user') ? $this->Html->link($complaint->user->nama, ['controller' => 'Users', 'action' => 'view', $complaint->user->id]) : '' ?></td>

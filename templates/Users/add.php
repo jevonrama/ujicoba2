@@ -1,9 +1,4 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\User $user
- */
-?>
+<?php $this->layout = 'CakeLte.login'?>
 
 <?php
 $this->assign('title', __('Add User'));
@@ -22,7 +17,7 @@ $this->Breadcrumbs->add([
         <?= $this->Form->control('username') ?>
         <?= $this->Form->control('password') ?>
         <?= $this->Form->control('telp') ?>
-        <?= $this->Form->control('level') ?>
+        <?= $this->Form->control('level', ['options' => [0=>'Admin', 1 => 'Petugas', 2 => 'Warga'], 'class' => 'form-control']) ?>
     </div>
     <div class="card-footer d-flex">
         <div class="ml-auto">

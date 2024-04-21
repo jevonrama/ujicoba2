@@ -21,7 +21,7 @@ $this->Breadcrumbs->add([
         <?= $this->Form->control('judul') ?>
         <?= $this->Form->control('isi') ?>
         <?= $this->Form->control('gambar', ['type' => 'file']) ?>
-        <?= $this->Form->control('status') ?>
+        <?= $this->Form->control('status', ['options' =>[0=>'Menunggu', 1=>'Diproses', 2=>'Ditolak',3=>'selesai'], 'class' => 'form-control' ]) ?>
         <?= $this->Form->control('user_id', ['options' => $users, 'class' => 'form-control']) ?>
     </div>
     <div class="card-footer d-flex">
